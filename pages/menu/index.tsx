@@ -1,6 +1,6 @@
 import { Box } from '@chakra-ui/react';
 
-export default function menu({ data }) {
+export default function menu({ data }:any) {
   if (data) {
     console.log(data);
   }

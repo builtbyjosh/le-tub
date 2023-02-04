@@ -5,20 +5,18 @@ import {
   Box,
   Heading,
   Text,
-  Button,
   Image,
-  IconButton,
-  useColorModeValue,
+
   UnorderedList,
   ListItem,
 } from '@chakra-ui/react';
-import { Blob, PlayIcon } from '@/styles/icons';
+import { Blob } from '@/styles/icons';
 import frontEntrance from '../public/front-entrance.jpg';
 
 export default function Home() {
-  console.log(frontEntrance);
+
   return (
-    <Container maxW={'7xl'}>
+    <Box >
       <Stack
         align={'center'}
         spacing={{ base: 8, md: 10 }}
@@ -26,13 +24,13 @@ export default function Home() {
         direction={{ base: 'column', md: 'row' }}
       >
         <Stack flex={1} spacing={{ base: 5, md: 10 }}>
-          <Heading
+          <Text
             lineHeight={1.1}
             fontWeight={600}
-            fontSize={{ base: '3xl', sm: '4xl', lg: '6xl' }}
+            fontSize={{ base: 'xl', sm: '2xl', lg: '4xl' }}
           >
             Welcome to Le Tub Saloon
-          </Heading>
+          </Text>
           <Text color={'gray.500'}>
             Established November 2nd 1959 as a Sunoco gas station.... Closed by
             the energy crunch of the early seventies, your Host purchased the
@@ -67,7 +65,7 @@ export default function Home() {
             top={'-20%'}
             left={0}
             zIndex={-1}
-            color={useColorModeValue('red.50', 'red.400')}
+            color={'red.50'}
           />
           <Box
             position={'relative'}
@@ -88,6 +86,6 @@ export default function Home() {
           </Box>
         </Flex>
       </Stack>
-    </Container>
+    </Box>
   );
 }
